@@ -94,6 +94,7 @@ main {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   align-content: center;
+  margin-block: 20px;
 }
 
 #buttons {
@@ -173,9 +174,76 @@ main {
   padding: 10px;
   justify-content: space-evenly;
   border-radius: 6px;
-  margin-top: 20px;
 }
 
 #info span {
   color: var(--text-color-1);
+}
+
+div#game {
+  position: relative;
+}
+
+.space {
+  width: 100%;
+  height: 1px;
+  margin-block: 32px;
+}
+
+#words span {
+  color: var(--sub-color);
+  font-size: 2.5rem;
+}
+
+#focus-error {
+  position: absolute;
+  inset: 0;
+  font-size: 1.2rem;
+  color: var(--sub-color-2);
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+#words {
+  filter: blur(8px);
+}
+
+#game:focus #words {
+  filter: blur(0);
+}
+
+#game:focus #focus-error {
+  display: none;
+}
+
+#cursor {
+  width: 3px;
+  height: 2.3rem;
+  background-color: var(--main-color);
+  position: fixed;
+  top: 260px;
+  left: 62px;
+  animation: blink 0.9s infinite;
+  border-radius: 2px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

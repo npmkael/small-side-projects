@@ -46,7 +46,7 @@
       <div class="game-header">
         <div id="info">
           <span class="time">Time left: 0s</span>
-          <span class="mistakes">Mistakes:</span>
+          <span class="mistakes">Mistakes: 0</span>
           <span class="word-per-minute">WPM: 0</span>
           <span class="character-per-minute">CPM: 0</span>
         </div>
@@ -58,10 +58,19 @@
           </button>
         </div>
       </div>
+
+      <div class="space"></div>
+
       <div id="game">
         <div id="words"></div>
         <div id="cursor"></div>
+        <div id="focus-error">
+          <i class="fa-solid fa-arrow-pointer"></i>
+          Click here to focus or press any key
+        </div>
       </div>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
